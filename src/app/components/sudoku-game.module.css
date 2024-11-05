@@ -1,0 +1,83 @@
+/* sudoku-game.module.css */
+
+/* Main page container */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Sudoku title styling */
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Timer styling */
+.timer {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+/* Outer 3x3 grid for the Sudoku board */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  background-color: #333;
+  padding: 5px;
+  user-select: none;
+}
+
+/* Inner 3x3 grid for each Sudoku subgrid */
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 4rem);
+  grid-template-rows: repeat(3, 4rem);
+  gap: 1px;
+  background-color: #333;
+}
+
+/* Styling for each cell within the subgrids */
+.cell {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Highlight focused cell */
+.focusedCell {
+  background-color: #e0f7fa;
+  border: 2px solid #0288d1;
+}
+
+/* Styling for notes container */
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.7rem;
+  color: black;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual note styling */
+.note {
+  width: 33%; /* Divide cell into a 3x3 grid for notes */
+  text-align: center;
+  line-height: 1.2rem; /* Align notes nicely in the grid */
+  font-size: 0.7rem;
+  color: #666; /* Lighter color for notes */
+}
